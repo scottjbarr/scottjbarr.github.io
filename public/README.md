@@ -1,1 +1,0 @@
-# scottjbarr.github.io
