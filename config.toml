@@ -8,3 +8,4 @@ menu = "main"
 
 [params]
   description = "Loves building awesome systems to solve interesting business problems, with Ruby, Python, Golang and Javascript. Coffee fuelled trouble machine."
+  disqusShortname = "scottjbarrgithubio"
