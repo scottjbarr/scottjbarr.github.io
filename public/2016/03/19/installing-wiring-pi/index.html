@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+	<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
 <head>
   <link href="http://gmpg.org/xfn/11" rel="profile">
@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <title> 2016s &middot; Scott Barr </title>
+  <title> installing wiring pi &middot; Scott Barr </title>
 
   
   <link rel="stylesheet" href="/css/poole.css">
@@ -21,12 +21,11 @@
   <link rel="shortcut icon" href="/favicon.png">
 
   
-  <link href="/2016/index.xml" rel="alternate" type="application/rss+xml" title="Scott Barr" />
+  <link href="" rel="alternate" type="application/rss+xml" title="Scott Barr" />
 </head>
 
-<body class="">
-
-<div class="sidebar">
+	<body class="">
+		<div class="sidebar">
   <div class="container sidebar-sticky">
     <div class="sidebar-about">
       <a href="/"><h1>Scott Barr</h1></a>
@@ -53,22 +52,41 @@
 </div>
 
 
-  <div class="content container">
-    <ul class="posts">
-        
-        <li>
-          <span><a href="/2016/08/30/go-workers-sidekiq/">Processing Sidekiq jobs with Go Workers</a> <time class="pull-right post-list">Tue, Aug 30, 2016</time></span>
-        </li>
-        
-        <li>
-          <span><a href="/2016/03/19/installing-wiring-pi/">installing wiring pi</a> <time class="pull-right post-list">Sat, Mar 19, 2016</time></span>
-        </li>
-        
-        <li>
-          <span><a href="/2016/02/24/multiple-go-versions/">Multiple Go Versions</a> <time class="pull-right post-list">Thu, Feb 25, 2016</time></span>
-        </li>
-        
-    </ul>
-  </div>
-</body>
+		<div class="content container">
+			<div class="post">
+			 	<h1>installing wiring pi</h1>
+			  <span class="post-date">Sat, Mar 19, 2016</span>
+			      <p>I want to giving <a href="http://wiringpi.com/">Wiring Pi</a> a shot while
+experimenting sending variable amounts of power to motors that I&rsquo;m
+driving from a Rasperry Pi.</p>
+
+<p>The Python <a href="http://pythonhosted.org/RPIO/pwm_py.html">RPIO</a> library
+only seems to expose HIGH and LOW (ON, or OFF). In my case I want to be able to power motors at less than 100%.</p>
+
+<pre><code>sudo apt-get install wiringpi python-dev
+sudo pip install wiringpi2
+</code></pre>
+
+			</div>
+
+			
+				<h2>Comments</h2>
+				<div id="disqus_thread"></div>
+<script type="text/javascript">
+     
+    var disqus_shortname = 'scottjbarrgithubio'; 
+
+     
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+			
+		</div>
+
+  </body>
 </html>

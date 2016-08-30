@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <title> About Scott Barr &middot; Scott Barr </title>
+  <title> Processing Sidekiq jobs with Go Workers &middot; Scott Barr </title>
 
   
   <link rel="stylesheet" href="/css/poole.css">
@@ -54,22 +54,47 @@
 
 		<div class="content container">
 			<div class="post">
-			 	<h1>About Scott Barr</h1>
-			  <span class="post-date">Sun, Feb 14, 2016</span>
-			      <p>I&rsquo;m a software developer.</p>
+			 	<h1>Processing Sidekiq jobs with Go Workers</h1>
+			  <span class="post-date">Tue, Aug 30, 2016</span>
+			      
 
-<p>I often describe myself as a Digital Plumber, but I also play as a
-Data Scientist from time to time.</p>
+<p>I have a personal project where a
+<a href="https://github.com/mperham/sidekiq">Sidekiq</a> worker (written in Ruby)
+was using between 150-200MB of RAM with 20 workers. These workers take
+images that have been uploaded to a Rails application, and upload them
+to an Amazon S3 bucket in the background. Most of the time these
+workers are idle. This project generates exactly $0.00 income, and I&rsquo;m
+paying for that RAM, which even in the amazing days of cloud
+computing, is still too expensive to waste on a personal budget.</p>
 
-<p>I love building systems in Go, Ruby, and Python. I&rsquo;m always working
-with HTML5 and Javascript, and have even built a few native apps.</p>
+<p>I decided to replace the Ruby process with a Go process in an attempt
+to reduce this wasted, idle RAM. (Sadly I do this kind of thing a
+lot).</p>
 
-<p>I&rsquo;m always keen to partner on great ideas. Talk to me.</p>
+<p>To replace the Ruby process, I needed to write some Go code that could
+upload files to Amazon S3, and process Sidekiq jobs from a Redis
+queue.</p>
 
-<p>Yes, I can and haved worked with &ldquo;the cloud&rdquo; :) <em>(Believe it or not, that is still a question that gets asked)</em></p>
+<p>The code that does the upload was really easy to write using the
+official <a href="https://github.com/aws/aws-sdk-go">AWS Go SDK</a> library. I
+wrote nothing more than a little wrapper really.</p>
 
-<p>You can reach me on <a href="https://twitter.com/scottjbarr">Twitter</a> or take a look at
-some of my projects on <a href="https://github.com/scottjbarr">Github</a>.</p>
+<p>I then added an application that picks up Sidekiq jobs from
+Redis. This wasn&rsquo;t too difficult as the
+<a href="https://github.com/cupcake/gokiq">Gokiq</a> library does most of the
+heavy lifting here. Working out a nice way to unpack the job data into
+my Worker struct without modifying the Gokiq library took some
+thought, but came out OK.</p>
+
+<h2 id="end-result">End Result</h2>
+
+<p>The Go process uses 28MB of RAM with 200 workers available. Compared
+to the 150-200MB of RAM with 20 workers that I had before, this is a
+nice little win.</p>
+
+<p>Take a look at the
+<a href="https://github.com/scottjbarr/s3uploader">s3uploader</a> repository on
+Github if is sounds useful.</p>
 
 			</div>
 

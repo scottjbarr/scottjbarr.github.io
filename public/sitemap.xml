@@ -3,8 +3,17 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2016-02-25T00:11:26+10:00</lastmod>
-    <priority>0</priority>
+    <lastmod>2016-08-30T20:05:00+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2016/08/30/go-workers-sidekiq/</loc>
+    <lastmod>2016-08-30T20:05:00+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2016/03/19/installing-wiring-pi/</loc>
+    <lastmod>2016-03-19T11:14:20+10:00</lastmod>
   </url>
   
   <url>
