@@ -3,6 +3,7 @@ Categories = ["Development", "Python", "Raspberry Pi", "Bot"]
 Description = ""
 Tags = ["Development", "Python", "Raspberry Pi", "Bot"]
 date = "2016-03-19T11:14:20+10:00"
+draft = true
 menu = "main"
 title = "installing wiring pi"
 
