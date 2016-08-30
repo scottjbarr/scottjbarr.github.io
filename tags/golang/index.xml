@@ -6,8 +6,56 @@
     <description>Recent content in Golang on Scott Barr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 25 Feb 2016 00:11:26 +1000</lastBuildDate>
+    <lastBuildDate>Tue, 30 Aug 2016 20:05:00 +1000</lastBuildDate>
     <atom:link href="/tags/golang/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Processing Sidekiq jobs with Go Workers</title>
+      <link>/2016/08/30/go-workers-sidekiq/</link>
+      <pubDate>Tue, 30 Aug 2016 20:05:00 +1000</pubDate>
+      
+      <guid>/2016/08/30/go-workers-sidekiq/</guid>
+      <description>
+
+&lt;p&gt;I have a personal project where a
+&lt;a href=&#34;https://github.com/mperham/sidekiq&#34;&gt;Sidekiq&lt;/a&gt; worker (written in Ruby)
+was using between 150-200MB of RAM with 20 workers. These workers take
+images that have been uploaded to a Rails application, and upload them
+to an Amazon S3 bucket in the background. Most of the time these
+workers are idle. This project generates exactly $0.00 income, and I&amp;rsquo;m
+paying for that RAM, which even in the amazing days of cloud
+computing, is still too expensive to waste on a personal budget.&lt;/p&gt;
+
+&lt;p&gt;I decided to replace the Ruby process with a Go process in an attempt
+to reduce this wasted, idle RAM. (Sadly I do this kind of thing a
+lot).&lt;/p&gt;
+
+&lt;p&gt;To replace the Ruby process, I needed to write some Go code that could
+upload files to Amazon S3, and process Sidekiq jobs from a Redis
+queue.&lt;/p&gt;
+
+&lt;p&gt;The code that does the upload was really easy to write using the
+official &lt;a href=&#34;https://github.com/aws/aws-sdk-go&#34;&gt;AWS Go SDK&lt;/a&gt; library. I
+wrote nothing more than a little wrapper really.&lt;/p&gt;
+
+&lt;p&gt;I then added an application that picks up Sidekiq jobs from
+Redis. This wasn&amp;rsquo;t too difficult as the
+&lt;a href=&#34;https://github.com/cupcake/gokiq&#34;&gt;Gokiq&lt;/a&gt; library does most of the
+heavy lifting here. Working out a nice way to unpack the job data into
+my Worker struct without modifying the Gokiq library took some
+thought, but came out OK.&lt;/p&gt;
+
+&lt;h2 id=&#34;end-result&#34;&gt;End Result&lt;/h2&gt;
+
+&lt;p&gt;The Go process uses 28MB of RAM with 200 workers available. Compared
+to the 150-200MB of RAM with 20 workers that I had before, this is a
+nice little win.&lt;/p&gt;
+
+&lt;p&gt;Take a look at the
+&lt;a href=&#34;https://github.com/scottjbarr/s3uploader&#34;&gt;s3uploader&lt;/a&gt; repository on
+Github if is sounds useful.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Multiple Go Versions</title>
