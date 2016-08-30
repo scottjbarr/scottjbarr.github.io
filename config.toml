@@ -7,5 +7,5 @@ theme = "hyde"
 menu = "main"
 
 [params]
-  description = "Loves building awesome systems to solve interesting business problems, with Ruby, Python, Golang and Javascript. Coffee fuelled trouble machine."
+  description = "Loves building awesome systems to solve interesting problems, with Golang, Ruby, Python, and Javascript. Coffee fuelled trouble machine."
   disqusShortname = "scottjbarrgithubio"
