@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="http://gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.15" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title> Scott Barr &middot; Scott Barr </title>
+
+  
+  <link rel="stylesheet" href="/css/poole.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="stylesheet" href="/css/hyde.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700|Abril+Fatface">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/favicon.png">
+
+  
+  <link href="/index.xml" rel="alternate" type="application/rss+xml" title="Scott Barr" />
+</head>
+
+<body class="">
+
+<div class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="/"><h1>Scott Barr</h1></a>
+      <p class="lead">
+       Loves building awesome systems to solve interesting business problems, with Ruby, Python, Golang and Javascript. Coffee fuelled trouble machine. 
+      </p>
+    </div>
+
+    <ul class="sidebar-nav">
+      <li><a href="/">Home</a> </li>
+      
+        <li><a href="/about/"> About Scott Barr </a></li>
+      
+        <li><a href="/2016/02/24/multiple-go-versions/"> Multiple Go Versions </a></li>
+      
+    </ul>
+
+    <p>&copy; 2016. All rights reserved. </p>
+  </div>
+</div>
+
+
+    <div class="content container">
+<div class="posts">
+
+      
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2016/02/24/multiple-go-versions/">
+        Multiple Go Versions
+      </a>
+    </h1>
+
+    <span class="post-date">Thu, Feb 25, 2016</span>
+
+    <p>Running multiple versions of Go is simple. I see and hear chatter
+about it, and there are a few tools around to handle it for you, but
+it is so simple to do yourself that I&rsquo;m surprised people reach for a
+tool to do this for them.</p>
+
+<p>Mostly I run the latest stable version of Go, but for whatever reason
+(maybe I want to test out a release candidate), I do have multiple
+versions installed, and I don&rsquo;t want multiple installations to clobber
+each other.</p>
+
+<p>The following assumes you&rsquo;re on some kind of *nix system, and you&rsquo;re
+using Bash. Other OS&rsquo;es and shells will be able to work as well with
+appropriate changes.</p>
+
+<p>I like to keep my Go installations under <code>~/.go/versions</code>. You can
+choose any location you like though.</p>
+
+<pre><code>mkdir -p ~/.go/versions
+</code></pre>
+
+<p>Let&rsquo;s grab the latest version of Go (currently 1.6). I&rsquo;m downloading
+the OS X archive here, but if you&rsquo;re running another OS you would
+download the appropriate archive. Take a look at the Go
+<a href="https://golang.org/dl/">Downloads</a> page.</p>
+
+<pre><code>cd ~/.go/versions
+wget https://storage.googleapis.com/golang/go1.6.darwin-amd64.tar.gz
+tar -zxf go1.6.darwin-amd64.tar.gz
+mv go go1.6
+rm go1.6.darwin-amd64.tar.gz
+</code></pre>
+
+<p>Add the following environment variables to your <code>~/.bash_profile</code>.</p>
+
+<pre><code>export GOPATH=~/p/go
+export GOROOT=~/.go/versions/go1.6
+export PATH=$GOROOT/bin:$GOPATH/bin:$PATH
+</code></pre>
+
+<p>This is where I set my default version of Go.</p>
+
+<p><strong>Note</strong> : <code>GOPATH</code> is where your Go projects will live, and <code>GOROOT</code>
+is where the Go installation lives. Don&rsquo;t confuse the two.</p>
+
+<p>Start a new shell and you should have <code>go</code> on your path.</p>
+
+<pre><code>$ go version
+go version go1.6 darwin/amd64
+</code></pre>
+
+<p>Success!</p>
+
+<p>So for whatever reason I also want an older version of Go installed.</p>
+
+<pre><code>cd ~/.go/versions
+wget https://storage.googleapis.com/golang/go1.5.3.darwin-amd64.tar.gz
+tar -zxf go1.5.3.darwin-amd64.tar.gz
+mv go go1.5.3
+</code></pre>
+
+<p>Too easy. You must be getting bored.</p>
+
+<p>Now I can temporarily switch to the another version by exporting the
+desired <code>GOROOT</code> and prefixing my current <code>$PATH</code> with <code>$GOROOT/bin</code>. In this case I am switching to the freshly installed GO 1.5.3.</p>
+
+<pre><code>$ export GOROOT=~/.go/versions/go1.5.3
+$ export PATH=$GOROOT/bin:$PATH
+$ go version
+go version go1.5.3 darwin/amd64
+</code></pre>
+
+<p><img src="/images/great-success.jpg" alt="Great Success!" /></p>
+
+  </div>
+  
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/about/">
+        About Scott Barr
+      </a>
+    </h1>
+
+    <span class="post-date">Sun, Feb 14, 2016</span>
+
+    <p>I&rsquo;m a software developer.</p>
+
+<p>I often describe myself as a Digital Plumber, but I also play as a
+Data Scientist from time to time.</p>
+
+<p>I love building systems in Go, Ruby, and Python. I&rsquo;m always working
+with HTML5 and Javascript, and have even built a few native apps.</p>
+
+<p>I&rsquo;m always keen to partner on great ideas. Talk to me.</p>
+
+<p>Yes, I can and haved worked with &ldquo;the cloud&rdquo; :) <em>(Believe it or not, that is still a question that gets asked)</em></p>
+
+<p>You can reach me on <a href="https://twitter.com/scottjbarr">Twitter</a> or take a look at
+some of my projects on <a href="https://github.com/scottjbarr">Github</a>.</p>
+
+  </div>
+  
+</div>
+</div>
+
+  </body>
+</html>
