@@ -5,7 +5,6 @@ Tags = ["Development", "Go", "Golang", "AWS", "S3", "Redis"]
 date = "2016-08-30T20:05:00+10:00"
 menu = "main"
 title = "Processing Sidekiq jobs with Go Workers"
-
 +++
 
 I have a personal project where a
