@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bot on Scott Barr</title>
+    <link>/categories/bot/</link>
+    <description>Recent content in Bot on Scott Barr</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 19 Mar 2016 11:14:20 +1000</lastBuildDate>
+    <atom:link href="/categories/bot/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>installing wiring pi</title>
+      <link>/2016/03/19/installing-wiring-pi/</link>
+      <pubDate>Sat, 19 Mar 2016 11:14:20 +1000</pubDate>
+      
+      <guid>/2016/03/19/installing-wiring-pi/</guid>
+      <description>&lt;p&gt;I want to giving &lt;a href=&#34;http://wiringpi.com/&#34;&gt;Wiring Pi&lt;/a&gt; a shot while
+experimenting sending variable amounts of power to motors that I&amp;rsquo;m
+driving from a Rasperry Pi.&lt;/p&gt;
+
+&lt;p&gt;The Python &lt;a href=&#34;http://pythonhosted.org/RPIO/pwm_py.html&#34;&gt;RPIO&lt;/a&gt; library
+only seems to expose HIGH and LOW (ON, or OFF). In my case I want to be able to power motors at less than 100%.&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;sudo apt-get install wiringpi python-dev
+sudo pip install wiringpi2
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

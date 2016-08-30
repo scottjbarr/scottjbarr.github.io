@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2016-08-30T20:05:00+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2016/08/30/go-workers-sidekiq/</loc>
+    <lastmod>2016-08-30T20:05:00+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2016/03/19/installing-wiring-pi/</loc>
+    <lastmod>2016-03-19T11:14:20+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/2016/02/24/multiple-go-versions/</loc>
+    <lastmod>2016-02-25T00:11:26+10:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/about/</loc>
+    <lastmod>2016-02-14T14:33:41+10:00</lastmod>
+  </url>
+  
+</urlset>
