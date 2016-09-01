@@ -1,0 +1,11 @@
+baseurl = "/"
+languageCode = "en-us"
+title = "Scott Barr"
+
+theme = "hyde"
+
+menu = "main"
+
+[params]
+  description = "Loves building awesome systems to solve interesting problems, with Golang, Ruby, Python, and Javascript. Coffee fuelled trouble machine."
+  disqusShortname = "scottjbarrgithubio"
