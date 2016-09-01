@@ -146,6 +146,9 @@ go version go1.5.3 darwin/amd64
       <guid>/about/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m a software developer.&lt;/p&gt;
 
+&lt;p&gt;I really like writing software in Go, and I am fortunate enough to
+spend quite a bit of time doing so, with a bunch of smart people.&lt;/p&gt;
+
 &lt;p&gt;I often describe myself as a Digital Plumber, but I also play as a
 Data Scientist from time to time.&lt;/p&gt;
 
@@ -154,10 +157,11 @@ with HTML5 and Javascript, and have even built a few native apps.&lt;/p&gt;
 
 &lt;p&gt;I&amp;rsquo;m always keen to partner on great ideas. Talk to me.&lt;/p&gt;
 
-&lt;p&gt;Yes, I can and haved worked with &amp;ldquo;the cloud&amp;rdquo; :) &lt;em&gt;(Believe it or not, that is still a question that gets asked)&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Yes, I can and haved worked with &amp;ldquo;the cloud&amp;rdquo; :)&lt;/p&gt;
 
-&lt;p&gt;You can reach me on &lt;a href=&#34;https://twitter.com/scottjbarr&#34;&gt;Twitter&lt;/a&gt; or take a look at
-some of my projects on &lt;a href=&#34;https://github.com/scottjbarr&#34;&gt;Github&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can reach me on &lt;a href=&#34;https://twitter.com/scottjbarr&#34;&gt;Twitter&lt;/a&gt; or take
+a look at some of my projects on
+&lt;a href=&#34;https://github.com/scottjbarr&#34;&gt;Github&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
