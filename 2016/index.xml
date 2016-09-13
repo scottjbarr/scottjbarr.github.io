@@ -10,7 +10,7 @@
     <atom:link href="/2016/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Moving SQS messages to another Queue</title>
+      <title>Moving SQS Messages To Another Queue</title>
       <link>/2016/09/13/moving-sqs-messages/</link>
       <pubDate>Tue, 13 Sep 2016 23:50:00 +1000</pubDate>
       
@@ -24,7 +24,7 @@ small utility, which I creatively
 named &lt;a href=&#34;https://github.com/scottjbarr/sqsmv&#34;&gt;sqsmv&lt;/a&gt;.&lt;/p&gt;
 
 &lt;p&gt;I wrote the project in &lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt; because it is a great
-fit for system programs, and I&amp;rsquo;ve worked with
+fit for command line programs, and I&amp;rsquo;ve also worked with
 the &lt;a href=&#34;https://github.com/aws/aws-sdk-go&#34;&gt;Go AWS SDK&lt;/a&gt; before.&lt;/p&gt;
 
 &lt;p&gt;I created a bunch of messages and tested it&amp;hellip; First try! This is
@@ -32,8 +32,8 @@ something I find happens more often when I&amp;rsquo;m building with Go,
 compared to doing the same task with a dynamic language.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&#34;https://github.com/scottjbarr/sqsmv&#34;&gt;sqsmv&lt;/a&gt; has worked well,
-successfully moving hundreds of messages successfully between
-queues. I hope someone out there finds it useful.&lt;/p&gt;
+successfully moving hundreds of messages between SQS queues. I hope
+someone out there finds it useful.&lt;/p&gt;
 </description>
     </item>
     

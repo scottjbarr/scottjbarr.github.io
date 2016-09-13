@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <title> Moving SQS messages to another Queue &middot; Scott Barr </title>
+  <title> Moving SQS Messages To Another Queue &middot; Scott Barr </title>
 
   
   <link rel="stylesheet" href="/css/poole.css">
@@ -49,7 +49,7 @@
       
         <li><a href="/about/"> About Scott Barr </a></li>
       
-        <li><a href="/2016/09/13/moving-sqs-messages/"> Moving SQS messages to another Queue </a></li>
+        <li><a href="/2016/09/13/moving-sqs-messages/"> Moving SQS Messages To Another Queue </a></li>
       
         <li><a href="/2016/02/24/multiple-go-versions/"> Multiple Go Versions </a></li>
       
@@ -64,7 +64,7 @@
 
 		<div class="content container">
 			<div class="post">
-			 	<h1>Moving SQS messages to another Queue</h1>
+			 	<h1>Moving SQS Messages To Another Queue</h1>
 			  <span class="post-date">Tue, Sep 13, 2016</span>
 			      <p>Recently we ran into a situation at work where we needed to move all
 messages from one of our dead letter queues, back onto the &ldquo;live&rdquo;
@@ -75,7 +75,7 @@ small utility, which I creatively
 named <a href="https://github.com/scottjbarr/sqsmv">sqsmv</a>.</p>
 
 <p>I wrote the project in <a href="https://golang.org/">Go</a> because it is a great
-fit for system programs, and I&rsquo;ve worked with
+fit for command line programs, and I&rsquo;ve also worked with
 the <a href="https://github.com/aws/aws-sdk-go">Go AWS SDK</a> before.</p>
 
 <p>I created a bunch of messages and tested it&hellip; First try! This is
@@ -83,8 +83,8 @@ something I find happens more often when I&rsquo;m building with Go,
 compared to doing the same task with a dynamic language.</p>
 
 <p><a href="https://github.com/scottjbarr/sqsmv">sqsmv</a> has worked well,
-successfully moving hundreds of messages successfully between
-queues. I hope someone out there finds it useful.</p>
+successfully moving hundreds of messages between SQS queues. I hope
+someone out there finds it useful.</p>
 
 			</div>
 
