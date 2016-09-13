@@ -4,7 +4,7 @@ Description = ""
 Tags = ["Development", "Go", "Golang", "AWS", "SQS"]
 date = "2016-09-13T23:50:00+10:00"
 menu = "main"
-title = "sqsmv"
+title = "Moving SQS messages to another Queue"
 +++
 
 Recently we ran into a situation at work where we needed to move all

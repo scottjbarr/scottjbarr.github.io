@@ -25,6 +25,15 @@
 </head>
 
 <body class="">
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-1805353-19', 'auto');
+  ga('send', 'pageview');
+</script>
 
 <div class="sidebar">
   <div class="container sidebar-sticky">
@@ -39,6 +48,8 @@
       <li><a href="/">Home</a> </li>
       
         <li><a href="/about/"> About Scott Barr </a></li>
+      
+        <li><a href="/2016/09/13/moving-sqs-messages/"> Moving SQS messages to another Queue </a></li>
       
         <li><a href="/2016/02/24/multiple-go-versions/"> Multiple Go Versions </a></li>
       
@@ -55,6 +66,37 @@
 <div class="posts">
 
       
+  <div class="post">
+    <h1 class="post-title">
+      <a href="/2016/09/13/moving-sqs-messages/">
+        Moving SQS messages to another Queue
+      </a>
+    </h1>
+
+    <span class="post-date">Tue, Sep 13, 2016</span>
+
+    <p>Recently we ran into a situation at work where we needed to move all
+messages from one of our dead letter queues, back onto the &ldquo;live&rdquo;
+queue for the service.</p>
+
+<p>AWS doesn&rsquo;t expose a way to move messages out of the box, so I wrote a
+small utility, which I creatively
+named <a href="https://github.com/scottjbarr/sqsmv">sqsmv</a>.</p>
+
+<p>I wrote the project in <a href="https://golang.org/">Go</a> because it is a great
+fit for system programs, and I&rsquo;ve worked with
+the <a href="https://github.com/aws/aws-sdk-go">Go AWS SDK</a> before.</p>
+
+<p>I created a bunch of messages and tested it&hellip; First try! This is
+something I find happens more often when I&rsquo;m building with Go,
+compared to doing the same task with a dynamic language.</p>
+
+<p><a href="https://github.com/scottjbarr/sqsmv">sqsmv</a> has worked well,
+successfully moving hundreds of messages successfully between
+queues. I hope someone out there finds it useful.</p>
+
+  </div>
+  
   <div class="post">
     <h1 class="post-title">
       <a href="/2016/08/30/go-workers-sidekiq/">
@@ -199,20 +241,24 @@ go version go1.5.3 darwin/amd64
 
     <span class="post-date">Sun, Feb 14, 2016</span>
 
-    <p>I&rsquo;m a software developer.</p>
+    <p>I&rsquo;m a software developer. I really like writing systems in Go (a.k.a Golang),
+Ruby and Python. I&rsquo;m always working with HTML5 and Javascript, and I&rsquo;ve even
+built a few native apps.</p>
+
+<p>I&rsquo;m the founder of the
+<a href="https://www.meetup.com/Brisbane-Golang-Meetup/">Brisbane Gophers</a>, where
+people interested in Go get together and share what they&rsquo;re learned with each
+other.</p>
 
 <p>I often describe myself as a Digital Plumber, but I also play as a
 Data Scientist from time to time.</p>
 
-<p>I love building systems in Go, Ruby, and Python. I&rsquo;m always working
-with HTML5 and Javascript, and have even built a few native apps.</p>
+<p>I&rsquo;m always keen to partner on great ideas. Talk to me. I don&rsquo;t bite.</p>
 
-<p>I&rsquo;m always keen to partner on great ideas. Talk to me.</p>
+<p>Yes, I can and haved worked with &ldquo;the cloud&rdquo; :)</p>
 
-<p>Yes, I can and haved worked with &ldquo;the cloud&rdquo; :) <em>(Believe it or not, that is still a question that gets asked)</em></p>
-
-<p>You can reach me on <a href="https://twitter.com/scottjbarr">Twitter</a> or take a look at
-some of my projects on <a href="https://github.com/scottjbarr">Github</a>.</p>
+<p>You can reach me on <a href="https://twitter.com/scottjbarr">Twitter</a> or take a look
+at some of my projects on <a href="https://github.com/scottjbarr">Github</a>.</p>
 
   </div>
   
