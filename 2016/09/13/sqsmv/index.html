@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
 
-  <title> About Scott Barr &middot; Scott Barr </title>
+  <title> sqsmv &middot; Scott Barr </title>
 
   
   <link rel="stylesheet" href="/css/poole.css">
@@ -64,26 +64,27 @@
 
 		<div class="content container">
 			<div class="post">
-			 	<h1>About Scott Barr</h1>
-			  <span class="post-date">Sun, Feb 14, 2016</span>
-			      <p>I&rsquo;m a software developer. I really like writing systems in Go (a.k.a Golang),
-Ruby and Python. I&rsquo;m always working with HTML5 and Javascript, and I&rsquo;ve even
-built a few native apps.</p>
+			 	<h1>sqsmv</h1>
+			  <span class="post-date">Tue, Sep 13, 2016</span>
+			      <p>Recently we ran into a situation at work where we needed to move all
+messages from one of our dead letter queues, back onto the &ldquo;live&rdquo;
+queue for the service.</p>
 
-<p>I&rsquo;m the founder of the
-<a href="https://www.meetup.com/Brisbane-Golang-Meetup/">Brisbane Gophers</a>, where
-people interested in Go get together and share what they&rsquo;re learned with each
-other.</p>
+<p>AWS doesn&rsquo;t expose a way to move messages out of the box, so I wrote a
+small utility, which I creatively
+named <a href="https://github.com/scottjbarr/sqsmv">sqsmv</a>.</p>
 
-<p>I often describe myself as a Digital Plumber, but I also play as a
-Data Scientist from time to time.</p>
+<p>I wrote the project in <a href="https://golang.org/">Go</a> because it is a great
+fit for system programs, and I&rsquo;ve worked with
+the <a href="https://github.com/aws/aws-sdk-go">Go AWS SDK</a> before.</p>
 
-<p>I&rsquo;m always keen to partner on great ideas. Talk to me. I don&rsquo;t bite.</p>
+<p>I created a bunch of messages and tested it&hellip; First try! This is
+something I find happens more often when I&rsquo;m building with Go,
+compared to doing the same task with a dynamic language.</p>
 
-<p>Yes, I can and haved worked with &ldquo;the cloud&rdquo; :)</p>
-
-<p>You can reach me on <a href="https://twitter.com/scottjbarr">Twitter</a> or take a look
-at some of my projects on <a href="https://github.com/scottjbarr">Github</a>.</p>
+<p><a href="https://github.com/scottjbarr/sqsmv">sqsmv</a> has worked well,
+successfully moving hundreds of messages successfully between
+queues. I hope someone out there finds it useful.</p>
 
 			</div>
 

@@ -1,13 +1,40 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Go on Scott Barr</title>
-    <link>/tags/go/</link>
-    <description>Recent content in Go on Scott Barr</description>
+    <title>Scott Barr</title>
+    <link>/tags/go/index.xml</link>
+    <description>Recent content on Scott Barr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 30 Aug 2016 20:05:00 +1000</lastBuildDate>
     <atom:link href="/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>sqsmv</title>
+      <link>/2016/09/13/sqsmv/</link>
+      <pubDate>Tue, 13 Sep 2016 23:50:00 +1000</pubDate>
+      
+      <guid>/2016/09/13/sqsmv/</guid>
+      <description>&lt;p&gt;Recently we ran into a situation at work where we needed to move all
+messages from one of our dead letter queues, back onto the &amp;ldquo;live&amp;rdquo;
+queue for the service.&lt;/p&gt;
+
+&lt;p&gt;AWS doesn&amp;rsquo;t expose a way to move messages out of the box, so I wrote a
+small utility, which I creatively
+named &lt;a href=&#34;https://github.com/scottjbarr/sqsmv&#34;&gt;sqsmv&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I wrote the project in &lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt; because it is a great
+fit for system programs, and I&amp;rsquo;ve worked with
+the &lt;a href=&#34;https://github.com/aws/aws-sdk-go&#34;&gt;Go AWS SDK&lt;/a&gt; before.&lt;/p&gt;
+
+&lt;p&gt;I created a bunch of messages and tested it&amp;hellip; First try! This is
+something I find happens more often when I&amp;rsquo;m building with Go,
+compared to doing the same task with a dynamic language.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/scottjbarr/sqsmv&#34;&gt;sqsmv&lt;/a&gt; has worked well,
+successfully moving hundreds of messages successfully between
+queues. I hope someone out there finds it useful.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Processing Sidekiq jobs with Go Workers</title>

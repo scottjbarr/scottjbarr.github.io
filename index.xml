@@ -2,12 +2,40 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Scott Barr</title>
-    <link>/</link>
+    <link>/index.xml</link>
     <description>Recent content on Scott Barr</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 30 Aug 2016 20:05:00 +1000</lastBuildDate>
+    <lastBuildDate>Tue, 13 Sep 2016 23:50:00 +1000</lastBuildDate>
     <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>sqsmv</title>
+      <link>/2016/09/13/sqsmv/</link>
+      <pubDate>Tue, 13 Sep 2016 23:50:00 +1000</pubDate>
+      
+      <guid>/2016/09/13/sqsmv/</guid>
+      <description>&lt;p&gt;Recently we ran into a situation at work where we needed to move all
+messages from one of our dead letter queues, back onto the &amp;ldquo;live&amp;rdquo;
+queue for the service.&lt;/p&gt;
+
+&lt;p&gt;AWS doesn&amp;rsquo;t expose a way to move messages out of the box, so I wrote a
+small utility, which I creatively
+named &lt;a href=&#34;https://github.com/scottjbarr/sqsmv&#34;&gt;sqsmv&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I wrote the project in &lt;a href=&#34;https://golang.org/&#34;&gt;Go&lt;/a&gt; because it is a great
+fit for system programs, and I&amp;rsquo;ve worked with
+the &lt;a href=&#34;https://github.com/aws/aws-sdk-go&#34;&gt;Go AWS SDK&lt;/a&gt; before.&lt;/p&gt;
+
+&lt;p&gt;I created a bunch of messages and tested it&amp;hellip; First try! This is
+something I find happens more often when I&amp;rsquo;m building with Go,
+compared to doing the same task with a dynamic language.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&#34;https://github.com/scottjbarr/sqsmv&#34;&gt;sqsmv&lt;/a&gt; has worked well,
+successfully moving hundreds of messages successfully between
+queues. I hope someone out there finds it useful.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>Processing Sidekiq jobs with Go Workers</title>
@@ -144,24 +172,24 @@ go version go1.5.3 darwin/amd64
       <pubDate>Sun, 14 Feb 2016 14:33:41 +1000</pubDate>
       
       <guid>/about/</guid>
-      <description>&lt;p&gt;I&amp;rsquo;m a software developer.&lt;/p&gt;
+      <description>&lt;p&gt;I&amp;rsquo;m a software developer. I really like writing systems in Go (a.k.a Golang),
+Ruby and Python. I&amp;rsquo;m always working with HTML5 and Javascript, and I&amp;rsquo;ve even
+built a few native apps.&lt;/p&gt;
 
-&lt;p&gt;I really like writing software in Go, and I am fortunate enough to
-spend quite a bit of time doing so, with a bunch of smart people.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m the founder of the
+&lt;a href=&#34;https://www.meetup.com/Brisbane-Golang-Meetup/&#34;&gt;Brisbane Gophers&lt;/a&gt;, where
+people interested in Go get together and share what they&amp;rsquo;re learned with each
+other.&lt;/p&gt;
 
 &lt;p&gt;I often describe myself as a Digital Plumber, but I also play as a
 Data Scientist from time to time.&lt;/p&gt;
 
-&lt;p&gt;I love building systems in Go, Ruby, and Python. I&amp;rsquo;m always working
-with HTML5 and Javascript, and have even built a few native apps.&lt;/p&gt;
-
-&lt;p&gt;I&amp;rsquo;m always keen to partner on great ideas. Talk to me.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;m always keen to partner on great ideas. Talk to me. I don&amp;rsquo;t bite.&lt;/p&gt;
 
 &lt;p&gt;Yes, I can and haved worked with &amp;ldquo;the cloud&amp;rdquo; :)&lt;/p&gt;
 
-&lt;p&gt;You can reach me on &lt;a href=&#34;https://twitter.com/scottjbarr&#34;&gt;Twitter&lt;/a&gt; or take
-a look at some of my projects on
-&lt;a href=&#34;https://github.com/scottjbarr&#34;&gt;Github&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;You can reach me on &lt;a href=&#34;https://twitter.com/scottjbarr&#34;&gt;Twitter&lt;/a&gt; or take a look
+at some of my projects on &lt;a href=&#34;https://github.com/scottjbarr&#34;&gt;Github&lt;/a&gt;.&lt;/p&gt;
 </description>
     </item>
     
